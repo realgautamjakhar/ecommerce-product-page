@@ -112,11 +112,13 @@ function handleDialogToggle() {
   const dialogElement = document.querySelector(".dialog");
   if (isDialogOpen) {
     console.log("close");
-    dialogElement.style.display = "none";
+    dialogElement.style.visibility = "hidden";
+    dialogElement.style.animation = "MenuOut 1s";
     isDialogOpen = false;
   } else {
     console.log("open");
-    dialogElement.style.display = "revert";
+    dialogElement.style.animation = "MenuIn 1s";
+    dialogElement.style.visibility = "visible";
     isDialogOpen = true;
   }
 }
